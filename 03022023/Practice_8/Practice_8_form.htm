@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Registration
+    </title>
+    <style>
+    </style>
+    <script>
+        function showInput() {
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var dob = document.getElementById("bdate").value;
+            var gender = document.getElementById("gender").value;
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("password").value;
+            var add = document.getElementById("address").value;
+            var city = document.getElementById("city").value;
+            var state = document.getElementById("state").value;
+            var pincode = document.getElementById("pincode").value;
+            var phone = document.getElementById("phone").value;
+
+
+            
+            
+            document.getElementById("display").innerHTML = "First name: "+fname+"<br>Last name: "+lname+"<br>DOB: "+dob+"<br>Gender: "+gender+"<br>E-mail: "+email+"<br>Passsword: "+pass+"<br>Address: "+add+"<br>City: "+city+"<br>State: "+state+"<br>Pincode: "+pincode+"<br>Phone: "+phone
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <form>
+            <h2>Personal information</h2>
+            <label>First name:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="fname" id="fname" required>*<br><br>
+            <label>Last name:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="lname" id="lname"><br><br>
+            <label>DOB:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="date" name="bdate" id="bdate" required>*<br><br>
+            <label>Gender:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select id="gender">
+                <option value="Choose a gender" name="gender"  selected>Choose a gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select><br>
+            <h2>Account information</h2>
+            <label>Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="email" id="email" required>*<br><br>
+            <label>Re-type Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="email" name="reEmail"><br><br>
+            <label>Password:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" id="password" name="password" required   
+                placeholder="(Min. 8 characters, 1 number, case-sensitive)" >*<br><br>
+            <label>Re-typePassword:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" name="rePassword"><br>
+            <h2>Contact information</h2>
+            <label>Address:</label>&nbsp;&nbsp;&nbsp;
+            <input type="text" id="address" name="address"><br><br>
+            <label>City:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="city" id="city"><br><br>
+            <label>State:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="state" id="state"><br><br>
+            <label>Pin code:</label>&nbsp;&nbsp;
+            <input type="number" name="pincode" id="pincode"><br><br>
+            <label>Phone:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" name="phone" id="phone" required>*<br><br>
+            <button type="button" onclick="showInput()">Submit</button><br>
+        </form>
+    </div>
+    <p>
+        <span id="display"></span>
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+.main{
+    width:fit-content;
+    height: fit-content;
+    margin: auto;
+}
+.div1{
+    float: left;
+    margin: 10px;
+    margin-left: 150px;
+    border: 3px;
+    border-style: double;
+
+}
+.div2{
+    float: left;
+    margin: 10px;
+    border: 3px;
+    border-style: double;
+}
+.div3{
+    float: left;
+    margin: 10px;
+    border: 3px;
+    border-style: double;
+}
+.div4{
+    float: left;
+    margin: 10px;
+    border: 3px;
+    border-style: double;
+}
+.description{
+    float: left;
+    text-align: center;
+}
+.pdiv{
+    text-align: center;
+    background-color:cornflowerblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p.des{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
