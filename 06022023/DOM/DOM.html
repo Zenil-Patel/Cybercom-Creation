@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <script src="../06022023/DOM.js"></script>
+    <style>
+        .classlist_style{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <label></label><input id="id1" class="class1">
+    <button onclick="response()">Click to get response</button><br><br>
+    <span id="display1"></span>
+    <br><br><hr>
+    <p>Background colour due to querySelector, and querySelector targets the first tag/class/id only.</p>
+    <p>By clicking the button the color of the text will get changed. Class attribute is only used in 1st, 3rd and 5th para.</p>
+    <p class="para">Hey, Zenil here!! Background colour due to querySelector</p>
+    <p class="qs">Hey, Zenil here!!</p>
+    <p class="para">Hey, Zenil here!!</p>
+    <p class="qs">Hey, Zenil here!!</p>
+    <p class="para">Hey, Zenil here!!</p>
+    <br>
+    <button onclick="className_querySelectorAll()">Change colour</button>
+    <button onclick="tagName_querySelector()">Count no of p tags<font></font></button><br>
+    <span id="display2"></span>
+    
+    <br><br><hr>
+
+    <p id="txt">This is a TEXT</p>
+    <button onclick="changeText()">Change text</button>
+    <h4 id="h4Id">Hey, </h4>
+    <button onclick="insertHTML()">Insert</button>
+
+    <br><br><hr>
+
+    <p id="getAttribute_id" class="getAttribute_class"></p> 
+    <span id="getAttribute_span"></span>
+    <button onclick="getAtt()">Get Attribute</button>
+
+    <br><br><hr>
+
+
+    <input type="text" value="OK" id="setAttribute_id">
+    <button onclick="changeType()">Change the type</button>
+
+    <br><br><hr>
+    <div id="classlist_id" class="classlist_style">
+    <p>Hey, Zenil here!!</p>
+    </div>
+    <button onclick="changeCss()">Toggle</button>
+</body>
+</html>
