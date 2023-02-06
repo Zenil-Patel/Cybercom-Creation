@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <P>Local storage items(Which were saved in browser here in script #static):</P>
+    <p id="display"></p>
+    <script>
+        localStorage.setItem("fname", "Zenil")
+        localStorage.setItem("lname", "Patel")
+
+        var firstName = localStorage.getItem("fname")
+        var lastName = localStorage.getItem("lname")
+
+        document.getElementById("display").innerHTML = firstName + " " + lastName
+    </script>
+</body>
+
+</html>

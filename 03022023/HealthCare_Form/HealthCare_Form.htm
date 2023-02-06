@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealhCare form</title>
+    <link rel="stylesheet" type="text/css" href="../HealthCare_Form/HealthCare_Form.css">
+    <script src="../HealthCare_Form/HealthCare_JavaScript.js"></script>
+</head>
+<body>
+
+    <div class="headerDiv" >
+        <h2>Information</h2>
+        <p><h1>Health Care Information +</h1></p>
+        <p>Complete all answers in capital letters</p>
+    </div>
+
+    <div class="informationDiv">
+        <h3>EMPLOYEE STATEMENT</h3>
+        <p>Group Contract Number: <input type="number"></p>
+            <p>Certificate Number: <input type="number"></p>
+            <p>Employee Last name: <input type="text"></p>
+            <p>DOB(DD/MM/YYYY): <input type="date"></p>
+            <p>Employee Address: <input type="text"></p>
+            <p id="yesIdText">Would you like your claim and payments deposited into your bank account?   </p>
+                <p>
+                    <input type="checkbox"> Yes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I've included a valid cheque
+           
+        </p>
+        <p style="color:rgb(182, 182, 182)">Please note that only a one time valid cheque is required if you change your banking informaion a new cheque will be needed</p>
+    </div>
+
+
+    <div class="informationDiv">
+        <h3>COORDINATION OF BENIFITS</h3>
+
+        <p>1. Does you're spouse and/or children have coverage under any other medical plan or contract?</p>
+        <p>
+            <input type="radio" id="yesId1" name="selection1"  value="Yes" onclick="visible1_yes()">Yes 
+            <input type="radio" id="noId1" value="No" name="selection1" onclick="visible1_no()">No
+        </p>
+
+        <div id="visibleDiv1" style="visibility: hidden;">
+            <p>If yes, spouse's date of birth: <input type="date"></p>
+            <p>Insurance company, policy number and certificate nnumber: <input type="number"></p>
+        </div>
+
+        <p>2. Is any expense the result of an accident?</p>
+        
+        <p>
+            <input type="radio" id="yesId2" value="Yes" name="selection2" onclick="visible2_yes()">Yes 
+            <input type="radio" id="noId2" value="No" name="selection2" onclick="visible2_no()">No
+        </p>
+
+        <div id="visibleDiv2" style="visibility: hidden;">
+            <p>If yes, Date of accident: <input type="date"></p>
+            <p>Location of accident: &nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox">&nbsp;&nbsp;  Work  &nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox">&nbsp;&nbsp; Home   &nbsp;&nbsp;&nbsp;&nbsp; <input type="checkbox">&nbsp;&nbsp; Other </p>
+            <p>Explain how the accident occured: <textarea cols="25" rows="3"></textarea></p>
+        </div>
+    </div>
+    
+
+    <div class="informationDiv">
+        <h3>DRUGS, VISION CARE, PARAMEDICAL SERVICES AND OTHERs - PATIENT INFORMATION</h3>
+        <table id="record">
+            <tr>
+                <th>Patient's name</th>
+                <th>Date of Birth</th>
+                <th>Relationship to plan member</th>
+                <th>Total charge</th>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td> <input type="date"></td>
+                <td><input type="text"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td> <input type="date"></td>
+                <td><input type="text"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td> <input type="date"></td>
+                <td><input type="text"></td>
+                <td><input type="number"></td>
+            </tr>
+        </table>
+        <button onclick="addNewRow()" type="button">Add new row</button>
+    </div>
+    
+</body>
+</html>

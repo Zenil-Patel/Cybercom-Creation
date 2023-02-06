@@ -1,0 +1,38 @@
+body{
+    margin: auto;
+    max-width:750px;
+}
+.informationDiv{
+    border-width: 2px;
+    border-style: solid;
+    border-color:  rgb(98, 190, 211);
+    margin: 5px;
+
+}
+#yesIdText{
+    color:  rgba(68,151,170,255);
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(68,151,170,255);
+}
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(68,151,170,255);
+}
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(68,151,170,255);
+    margin-left: 10px;
+}
+p{
+    margin-left: 20px;
+}
+table, th,td{
+    border-style: solid;
+    margin-left: 30px;
+}
+button{
+    margin-left: 30px;
+    margin-top: 10px;
+}
