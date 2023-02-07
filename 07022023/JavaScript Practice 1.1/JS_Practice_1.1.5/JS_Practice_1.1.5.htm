@@ -15,6 +15,9 @@
         div {
             display: inline-block;
         }
+        #v6Car:hover .v6Engine.jpg{
+            display: inline;
+        }
     </style>
 </head>
 
@@ -22,18 +25,18 @@
     <h1>5. Create a webpage with multiple images. Use JavaScript to change the source of the
         images based on user interaction.</h1>
     <div id="div1">
-        <img src="Nissan350z.jpg" id="v6Car" alt="No Image"  height="300" width="300"><br>
+        <img src="Nissan350z.jpg" id="v6Car" alt="No Image"  height="300" width="300" onmouseleave="getImage1()" onmouseenter="changeImage1()"><br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button type="button" onclick="changeImage1()">Click to view Engine</button>
     </div>
     <div id="div2">
-        <img src="Ford_Mustang.jpg" id="v8Car" alt="No Image" height="300" width="300"><br>
+        <img src="Ford_Mustang.jpg" id="v8Car" alt="No Image" height="300" width="300" onmouseleave="getImage2()" onmouseenter="changeImage2()"><br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button type="button" onclick="changeImage2()">Click to view Engine</button>
 
     </div>
     <div id="div3">
-        <img src="Dodge_Viper.jpg" id="v10Car" alt="No Image" height="300" width="300"><br>
+        <img src="Dodge_Viper.jpg" id="v10Car" alt="No Image" height="300" width="300" onmouseleave="getImage3()" onmouseenter="changeImage3()"><br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button type="button" onclick="changeImage3()">Click to view Engine</button>
 
