@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript 1.1.5</title>
+    <script src="../JS_Practice_1.1.5/JS_Practice_1.1.5.js"></script>
+    <style>
+        img {
+            margin: 30px;
+        }
+
+        div {
+            display: inline-block;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>5. Create a webpage with multiple images. Use JavaScript to change the source of the 
+    <h1>5. Create a webpage with multiple images. Use JavaScript to change the source of the
         images based on user interaction.</h1>
-    <div>
-        
+    <div id="div1">
+        <img src="Nissan350z.jpg" id="v6Car" alt="No Image"  height="300" width="300"><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" onclick="changeImage1()">Click to view Engine</button>
     </div>
+    <div id="div2">
+        <img src="Ford_Mustang.jpg" id="v8Car" alt="No Image" height="300" width="300"><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" onclick="changeImage2()">Click to view Engine</button>
+
+    </div>
+    <div id="div3">
+        <img src="Dodge_Viper.jpg" id="v10Car" alt="No Image" height="300" width="300"><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" onclick="changeImage3()">Click to view Engine</button>
+
+    </div>
+
+
 </body>
+
 </html>
