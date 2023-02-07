@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice 1.1.4</title>
+    <script src="/07022023/JavaScript Practice 1.1/JS_Practice_1.1.4/JS_Practice_1.1.4.js"></script>
+    <style>
+        p{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>4. Create a form with input fields and a submit button. Use JavaScript to validate the form 
+        data and display error messages if any of the fields are invalid.
+    </h1>
+    <form><p>First name, Date of birth, E-mail and Phone number are <span style="color:red">Mandatory fields.</span></p>
+        <label>First name:</label><input type="text" id="fname"><br><br>
+        <label>Last name:</label><input type="text" id="lname"><br><br>
+        <label>Date of birth:</label><input type="date" id="dob"><br><br>
+        <label for="email">E-mail:</label><input type="email" id="email"><br><br>
+        <label>Phone number:</label><input type="number" id="pnum"><br><br>
+        <label>Address:</label><textarea id="add" rows="3" cols="25"></textarea><br><br>
+        <button type="button" onclick="validate()">validate</button>
+     </form>
+     <span id="display"></span>
+</body>
+</html>
