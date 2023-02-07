@@ -4,11 +4,12 @@ var data = {
     age: 21,
     address: "Surat"
 };
+x = "firstname";
+console.log(data[x]);
 
-console.log(data.firstname);
 var info = {
     name : data.firstname,
     age : data.age
 };
 
-console.log(info.name);
+console.log(info);
