@@ -25,6 +25,7 @@ function tagName_querySelector(){
     debugger
     var size = document.getElementsByTagName("p");
     // Not executing
+    debugger;
     size[0].style.fontSize=25;
     size[1].style.fontSize=25;
     size[2].style.fontSize=25;
