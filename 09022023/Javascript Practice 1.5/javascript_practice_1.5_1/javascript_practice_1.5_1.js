@@ -1,6 +1,7 @@
 const str = "192168@11";
 let pattern = "~`!@#$%^&*()-_+={}[]|\/:;.<>,.?"
 let ip = str;
+
 let flag = 1;
 for(let i=0; i<ip.length; i++){
     for(j=0; j<pattern.length; j++){
