@@ -6,11 +6,10 @@ function clearScreen(){
     document.getElementById("display_exp").innerHTML = "";
 }
 function result(){
-    var expression = document.getElementById("display_exp").value;
-    console.log(expression);
+    var expression = document.getElementById("display_exp").innerHTML;
     var ans = eval(expression);
     // console.log(ans);
-    document.getElementById("display_result").innerHTML = ans;
+    document.getElementById("display_result").value = ans;
     // console.log(ans);
     
 }
