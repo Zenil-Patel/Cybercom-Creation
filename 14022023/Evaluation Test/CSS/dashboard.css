@@ -2,6 +2,11 @@
     display: inline-block;
     background-color: blanchedalmond;
 }
+
+#agePara1, #agePara2, #agePara3 {
+    background-color: burlywood;
+}
+
 .innerDiv{
     margin-left: 50px;
     display: inline-block;
