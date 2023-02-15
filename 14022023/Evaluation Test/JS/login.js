@@ -1,6 +1,9 @@
 if (!localStorage.getItem('Admin')) {
     document.getElementById('registerDiv').style.visibility = "visible";
 }
+if(localStorage.getItem('Admin')){
+    document.getElementById('registerTxt').style.visibility = "visible";
+}
 
 
 
@@ -72,6 +75,5 @@ function validate() {
         }
 
     }
-    return storedUserName;
 
 }
