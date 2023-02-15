@@ -1,0 +1,11 @@
+#div1, #div2{
+    display: inline-block;
+    background-color: blanchedalmond;
+}
+.innerDiv{
+    margin-left: 50px;
+    display: inline-block;
+}
+p, h2{
+    text-align: center;
+}

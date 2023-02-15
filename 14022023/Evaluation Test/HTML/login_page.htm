@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="text/css" href="../CSS/login.css">
+</head>
+<body>
+    <div class="divLogin">
+        <input type="email" id="loginEmail" placeholder="Email"><br>
+        <input type="password" id="loginPassword" placeholder="Password"><br>
+        <button type="button" id="loginBtn" onclick="validate()">LOGIN</button>
+        <div id="registerDiv" style="visibility: hidden;">
+        <p>OR</p>
+        <button type="button" id="registerBtn" onclick="redirect()">REGISTER NOW</button></div>
+    </div>
+    <span id="displayErr"></span><br>
+    <span id="displayErr2"></span>
+    <script src="../JS/login.js"></script>
+</body>
+</html>

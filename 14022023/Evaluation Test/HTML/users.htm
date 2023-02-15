@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users
+    </title>
+    <link rel="stylesheet" type="text/css" href="../CSS/dashboard.css">
+</head>
+
+<body>
+    <div>
+        <div id="div1" class="dashboardDiv">
+            <span id="userName_display">Hello, </span><br><br><br>
+            <p onclick="redirectDashboard()">Dashboard</p>
+            <p onclick="redirectUsers()">Users</p>
+            <p onclick="redirectSession()">Login Session</p>
+            <p onclick="logout()">Logout</p>
+        </div>
+
+
+        <div id="div2" class="dashboardDiv">
+            <h2>Add User</h2>
+            <input type="text" placeholder="Name" id="userName" size="10">
+            <input type="email" placeholder="Email" id="userEmail" size="10">
+            <input type="password" placeholder="Password" id="userPassword" size="10">
+            <input type="date" placeholder="Birthdate" id="userBdate" size="10"><br><br>
+            <button type="button" id="addUserBtn" onclick="addUser()">Add User</button><br><br>
+            <table id="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Birthdate</th>
+                    <th>Age</th>
+                    <th>Actions</th>
+                </tr>
+            </table>
+            <span id="displayErr"></span>
+        </div>
+    </div>
+
+    <script src="../JS/users.js"></script>
+</body>
+
+</html>

@@ -1,12 +1,19 @@
 let first = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("Output from one")
-    }, 10000);
+    error = false;
+    if(!error)
+    {
+        setTimeout(() => {
+            resolve("Output from one")
+        }, 10000);
+    }
+    else{
+        reject("There's some issue.")
+    }
 });
 
 
 
-first.then((value) =>{
+first.then((value) => {
     console.log(value)
     let second = new Promise((resolve, reject) => {
         setTimeout(() => {

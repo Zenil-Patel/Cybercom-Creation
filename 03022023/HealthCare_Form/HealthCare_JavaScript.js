@@ -9,7 +9,7 @@ function addNewRow() {
     var cell3 = row.insertCell(2);
     var cell4 = row.insertCell(3);
     
-    cell1.innerHTML = `<input type="text"></input>`
+    cell1.innerHTML = `<input type="text"></input`
     cell2.innerHTML = `<input type="date"></input>`
     cell3.innerHTML = `<input type="text"></input>`
     cell4.innerHTML = `<input type="text"></input>`
