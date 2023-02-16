@@ -1,6 +1,7 @@
 
 retrivedData = JSON.parse(localStorage.getItem('Users'));
 
+
 let userName = JSON.parse(localStorage.getItem("Admin"));
 document.getElementById('userName_display').innerHTML += userName.Name;
 
@@ -18,16 +19,30 @@ function redirectSession() {
 }
 
 function logout() {
-    window.location.href = 'login.htm';
+    window.location.href = 'login_page.htm';
 }
 
 
 let table = document.getElementById('table');
 for (i = 0; i < retrivedData.length; i++) {
-    function deleteUser() {
-        table.deleteRow(i);
-        delete retrivedData[i];
+
+    // console.log(retrivedData[i].Name);
+
+    function deleteUser(i) {
+        let data = JSON.parse(localStorage.getItem('Users'))
+        data.splice(i,1);
+        localStorage.setItem('Users', JSON.stringify(data));
+        window.location.reload();
+        
     }
+
+
+    function editUser() {
+        
+         console.log(i);
+        // document.getElementById('userName').innerHTML = retrivedData[i].Name;
+    }
+
     //For age
     let arr = [];
     arr.push(parseInt(retrivedData[i].Birthdate.split("-")));
@@ -47,7 +62,7 @@ for (i = 0; i < retrivedData.length; i++) {
     cell3.innerHTML = retrivedData[i].Password;
     cell4.innerHTML = retrivedData[i].Birthdate.split("-").reverse().join("-");
     cell5.innerHTML = 2023 - arr[0];
-    cell6.innerHTML = `<button onclick="">Edit</button><button onclick="deleteUser()">Delete</button>`;
+    cell6.innerHTML = `<button onclick="editUser()">Edit</button><button onclick="deleteUser(${i})">Delete</button>`;
 }
 
 function addUser() {
@@ -62,7 +77,7 @@ function addUser() {
 
                 userObj = { "Name": uName, "Email": uEmail, "Password": uPassword, "Birthdate": uBdate };
                 console.log(userObj)
-                
+
                 let a = JSON.stringify([]);
                 if (!localStorage.getItem('Users')) {
                     localStorage.setItem('Users', a);

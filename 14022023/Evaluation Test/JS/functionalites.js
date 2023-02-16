@@ -25,7 +25,7 @@ for (let i = 0; i < retriveData.length; i++) {
     let date = new Date();
 
     strDate = JSON.stringify(date);
-    var currentDate = strDate.slice(6, 11)
+    let currentDate = strDate.slice(6, 11)
     let bDate = (retriveData[i].Birthdate).slice(5,11);
     bdateArr.push(bDate);
     if (currentDate == bDate){
@@ -35,9 +35,19 @@ for (let i = 0; i < retriveData.length; i++) {
 
 //Array of ages of users
 let ageArr = [];
-for (let i=0; i<bdateArr.length; i++){
-    ageArr.push(parseInt(currentDate)-parseInt(bdateArr[i]));
+let bYear = [];
+let date = JSON.stringify(new Date())
+let currYear = date.slice(1,5)
+
+for(let i=0; i<retriveData.length; i++){
+    bYear.push((retriveData[i].Birthdate).slice(0,4))
 }
+
+
+for (let i=0; i<bdateArr.length; i++){
+    ageArr.push(parseInt(currYear)-parseInt(bYear[i]));
+}
+
 let below18Arr = [];
 let abover50Arr = [];
 let betnArr = [];
