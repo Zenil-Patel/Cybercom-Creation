@@ -25,8 +25,9 @@ for (let i=0; i<retrivedSession.length; i++){
 
     let cell1 = row.insertCell(0);
     let cell2 = row.insertCell(1);
-    // let cell3 = row.insertCell(2);
+    let cell3 = row.insertCell(2);
     cell1.innerHTML = retrivedSession[i].Name;
     cell2.innerHTML = retrivedSession[i].login_date_time;
+    cell3.innerHTML = retrivedSession[i].Logout_time_date;
 
 }

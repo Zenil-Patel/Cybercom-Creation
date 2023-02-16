@@ -64,10 +64,9 @@ function validate() {
 
             console.log("Logged in successfully as USER!!");
             window.location.href = 'sub_user.htm';
-
-
-            //in sub-user.htm
-            document.getElementById('userName_display').innerHTML += storedUserName;
+            
+            //Storing the name of logged in user into LS
+            localStorage.setItem("userSession", storedUserName);
 
         }
         else {

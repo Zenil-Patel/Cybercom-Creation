@@ -26,12 +26,7 @@ let table = document.getElementById('table');
 for (i = 0; i < retrivedData.length; i++) {
     function deleteUser() {
         table.deleteRow(i);
-
-        //Dummy code to delete at particular index in LS
-        // retrivedData[i] = retrivedData[i + 1]
-
-
-
+        delete retrivedData[i];
     }
     //For age
     let arr = [];
@@ -67,6 +62,7 @@ function addUser() {
 
                 userObj = { "Name": uName, "Email": uEmail, "Password": uPassword, "Birthdate": uBdate };
                 console.log(userObj)
+                
                 let a = JSON.stringify([]);
                 if (!localStorage.getItem('Users')) {
                     localStorage.setItem('Users', a);
