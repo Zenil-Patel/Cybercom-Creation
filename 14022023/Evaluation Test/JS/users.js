@@ -37,10 +37,9 @@ for (i = 0; i < retrivedData.length; i++) {
     }
 
 
-    function editUser() {
+    function editUser(i) {
+        let data = JSON.parse(localStorage.getItem('Users'))
         
-         console.log(i);
-        // document.getElementById('userName').innerHTML = retrivedData[i].Name;
     }
 
     //For age
@@ -62,7 +61,7 @@ for (i = 0; i < retrivedData.length; i++) {
     cell3.innerHTML = retrivedData[i].Password;
     cell4.innerHTML = retrivedData[i].Birthdate.split("-").reverse().join("-");
     cell5.innerHTML = 2023 - arr[0];
-    cell6.innerHTML = `<button onclick="editUser()">Edit</button><button onclick="deleteUser(${i})">Delete</button>`;
+    cell6.innerHTML = `<button onclick="editUser(${i})">Edit</button><button onclick="deleteUser(${i})">Delete</button>`;
 }
 
 function addUser() {

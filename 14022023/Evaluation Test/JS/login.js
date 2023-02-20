@@ -1,7 +1,7 @@
 if (!localStorage.getItem('Admin')) {
     document.getElementById('registerDiv').style.visibility = "visible";
 }
-if(localStorage.getItem('Admin')){
+if (localStorage.getItem('Admin')) {
     document.getElementById('registerTxt').style.visibility = "visible";
 }
 
@@ -64,7 +64,7 @@ function validate() {
 
             console.log("Logged in successfully as USER!!");
             window.location.href = 'sub_user.htm';
-            
+
             //Storing the name of logged in user into LS
             localStorage.setItem("userSession", storedUserName);
 
