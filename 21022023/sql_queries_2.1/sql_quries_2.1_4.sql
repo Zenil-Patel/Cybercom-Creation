@@ -1,0 +1,1 @@
+#  Write an SQL query to delete all the duplicate emails, keeping only one unique email with the smallest id. Return the result table in any order.

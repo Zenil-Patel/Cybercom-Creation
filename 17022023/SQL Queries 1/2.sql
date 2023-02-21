@@ -9,6 +9,8 @@ create table college (
 create table student (
 	student_id int auto_increment primary key,
     student_name varchar(255), 
+    age int not null,
+    student_email varchar (255) unique,
     college_id int not null
 );
 

@@ -26,6 +26,6 @@ create table ProductCategory (
 
 alter table productcategory 
 add foreign key (product_id) references product(product_id) on delete cascade;
-
+productcategory
 alter table productcategory 
 add foreign key (category_id) references categories(id) on delete cascade;
