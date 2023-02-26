@@ -1,5 +1,7 @@
 # SQL Queries 3.2
 # Case 1
+# Write a query to retrieve the title and body of the five most recent blog posts, along with the number of comments each post has.
+
 
 create database blog;
 
@@ -13,7 +15,6 @@ create table blog_posts
     updated_at timestamp,
     primary key (id)
 );
-
 INSERT INTO blog_posts VALUES 
   (1, 'My First Blog Post', 'This is my first blog post. Welcome to my blog!', 1, '2022-02-21 12:00:00', '2022-02-21 12:00:00'),
   (2, 'The Importance of Exercise', 'Exercise is important for maintaining a healthy body and mind. In this post, we explore the benefits of exercise and how you can make it a part of your daily routine.', 2, '2022-02-22 12:00:00', '2022-02-22 12:00:00'),
@@ -24,20 +25,7 @@ INSERT INTO blog_posts VALUES
   (7, 'The Science of Sleep', 'Sleep is a crucial aspect of our health and well-being. In this post, we explore the science of sleep and how you can improve your sleep habits for a better life.', 2, '2022-02-27 12:00:00', '2022-02-27 12:00:00'),
   (8, 'Tips for Starting a Successful Business', 'Starting a business can be challenging, but it can also be a rewarding experience. In this post, we offer tips and advice for those who want to start their own successful business.', 1, '2022-02-28 12:00:00', '2022-02-28 12:00:00'),
   (9, 'The Power of Positive Thinking', 'Positive thinking can have a profound impact on our lives and well-being. In this post, we explore the power of positive thinking and how you can cultivate a positive mindset for a better life.', 2, '2022-03-01 12:00:00', '2022-03-01 12:00:00'),
-  (10, 'The Benefits of a Plant-Based Diet', 'A plant-based diet can have a wide range of health benefits, including weight loss, reduced inflammation, and improved digestion. In this post, we explore the benefits of a plant-based diet and how you can incorporate more plant-based foods into your life.', 3, '2022-03-02 12:00:00', '2022-03-02 12:00:00'),
-  (11, 'The Art of Photography', 'Photography is a powerful form of visual art that can capture and communicate emotions, stories, and ideas. In this post, we explore the art of photography and how you can develop your own photographic style.', 1, '2022-03-03 12:00:00', '2022-03-03 12:00:00'),
-  (12, 'The Benefits of Journaling', 'Journaling can be a powerful tool for self-reflection, emotional processing, and personal growth. In this post, we explore the benefits of journaling and how you can start your own journaling practice.', 2, '2022-03-04 12:00:00', '2022-03-04 12:00:00'),
-  (13, 'The Importance of Self-Care', 'Self-care is essential for maintaining our physical, emotional, and mental health. In this post, we explore the importance of self-care and offer tips and advice for practicing self-care in your daily life.', 3, '2022-03-05 12:00:00', '2022-03-05 12:00:00'),
-(14, 'Post 11', 'This is the body of post 11', 2, '2022-02-22 10:00:00', '2022-02-22 11:00:00'),
-(15, 'Post 12', 'This is the body of post 12', 1, '2022-02-23 10:00:00', '2022-02-23 11:00:00'),
-(16, 'Post 13', 'This is the body of post 13', 3, '2022-02-24 10:00:00', '2022-02-24 11:00:00'),
-(17, 'Post 14', 'This is the body of post 14', 2, '2022-02-25 10:00:00', '2022-02-25 11:00:00'),
-(18, 'Post 15', 'This is the body of post 15', 1, '2022-02-26 10:00:00', '2022-02-26 11:00:00'),
-(19, 'Post 16', 'This is the body of post 16', 3, '2022-02-27 10:00:00', '2022-02-27 11:00:00'),
-(20, 'Post 17', 'This is the body of post 17', 2, '2022-02-28 10:00:00', '2022-02-28 11:00:00'),
-(21, 'Post 18', 'This is the body of post 18', 1, '2022-03-01 10:00:00', '2022-03-01 11:00:00'),
-(22, 'Post 19', 'This is the body of post 19', 3, '2022-03-02 10:00:00', '2022-03-02 11:00:00'),
-(23, 'Post 20', 'This is the body of post 20', 2, '2022-03-03 10:00:00', '2022-03-03 11:00:00');
+  (10, 'The Benefits of a Plant-Based Diet', 'A plant-based diet can have a wide range of health benefits, including weight loss, reduced inflammation, and improved digestion. In this post, we explore the benefits of a plant-based diet and how you can incorporate more plant-based foods into your life.', 3, '2022-03-02 12:00:00', '2022-03-02 12:00:00');
 
 
 
@@ -65,3 +53,8 @@ VALUES
 	(9, 6, 'I found this post really inspiring.', 8, '2022-04-05 08:00:00'),
 	(10, 6, 'Great advice, thanks!', 9, '2022-04-06 14:30:00');
 
+select p.title, p.body, count(c.post_id) as number_of_comments
+from blog_posts p
+join blog_comments c
+on p.id = c.post_id
+group by c.post_id;
